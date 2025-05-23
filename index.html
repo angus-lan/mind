@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>淨心觀 mosa.mosa</title>
+  <style>
+    /* ---- 全站 CSS ---- */
+    body {
+      margin: 0;
+      font-family: "Noto Serif TC", serif;
+      background-color: #fdfaf6;
+      color: #2e2b29;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('https://your-image-url.jpg') no-repeat center center/cover;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #fff7ec;
+      background: rgba(0,0,0,0.3);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-bottom: 2rem;
+      color: #5b4e3b;
+    }
+
+    button {
+      background-color: #d4b57f;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #a9884a;
+    }
+
+    /* ---- 手機版（寬度小於768px） ---- */
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+        padding: 1rem;
+      }
+
+      .quote {
+        font-size: 1.2rem;
+      }
+
+      button {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero 區塊 -->
+  <header>
+    <h1>那些年你說不出口的，我陪你一起找答案。</h1>
+  </header>
+
+  <!-- 內文區塊 -->
+  <section class="section">
+    <div class="quote" id="dailyQuote">今天的你值得被好好理解。</div>
+    <button onclick="drawCard()">抽一張療癒語錄</button>
+  </section>
+
+  <!-- JS互動區 -->
+  <script>
+    const quotes = [
+      "即使這世界喧囂不止，你仍可以靜靜地，做自己的燈。",
+      "療癒不是逃避，而是有勇氣面對。",
+      "你不是孤單，是正在蛻變。",
+      "就讓我們從『看見你自己』開始。",
+      "你不是沒有方向，只是累了，停下來看看雲也沒關係。",
+      "有些答案，不急著找，也會在剛剛好的時刻找到你。",
+      "不是你不夠好，而是你太常為了他人遺忘自己。",
+      "別急著振作，先好好哭一下，也是一種勇敢。",
+      "能坦然說出『我不知道』，是心靈成熟的開始。",
+      "我們總會在某一刻，理解那些曾讓我們難過的事。",
+      "這世界不是都能懂你，但我可以先聽你說說。",
+      "你的情緒不會妨礙誰，它只是提醒你，該抱抱自己了。",
+      "傷口會癒合，不是因為時間，而是你願意開始照顧它。",
+      "今天也請記得，不勉強自己，就是一種靜心的修行。",
+    ];
+
+    function drawCard() {
+      const quote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("dailyQuote").textContent = quote;
+    }
+  </script>
+
+</body>
+</html>
